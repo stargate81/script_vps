@@ -188,7 +188,7 @@ if [ $availableRAM -ge 4650 ] ; then
 		echo "erasing primary disk data"
 		sudo dd if=/dev/zero of=$firstDisk bs=1M count=1 # blank out the disk
 		echo "mounting devices"
-		mount -t tmpfs -o size=4500m tmpfs /mnt
+		mount -t tmpfs -o size=7000m tmpfs /mnt
 		mv /mediabots/* /mnt
 		mkdir /media/sw
 		mount -t tmpfs -o size=121m tmpfs /media/sw
