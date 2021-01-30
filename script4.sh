@@ -109,7 +109,7 @@ else
 	#b=($(fdisk -l | grep "^/dev/" | tr -d "*" | tr -s '[:space:]' | cut -f1 -d" "))
 fi
 if [ $diskNumbers -eq 1 ] ; then # opened 1st if
-if [ $availableRAM -ge 4650 ] ; then # opened 2nd if
+if [ $availableRAM -ge 2500 ] ; then # opened 2nd if
 	echo -e "${BLUE}For below option pass${NC} yes ${BLUE}iff, your VPS/Server came with${NC} boot system in ${NC}${RED}'RESCUE'${NC} mode ${BLUE}feature${NC}"
 	read -r -p "Do you want to completely delete your current Linux O.S.? (yes/no) : " deleteLinux
 	deleteLinux=$(echo "$deleteLinux" | head -c 1)
@@ -179,7 +179,7 @@ else
 	fi
 fi # 2nd if closed
 else # 1st if else
-if [ $availableRAM -ge 4650 ] ; then
+if [ $availableRAM -ge 2500 ] ; then
 	read -r -p "Do you want to completely delete your current Linux O.S.? (yes/no) : " deleteLinux
 	deleteLinux=$(echo "$deleteLinux" | head -c 1)
 	if [ ! -z $deleteLinux ] && [ $deleteLinux = 'Y' -o $deleteLinux = 'y' ] ; then
